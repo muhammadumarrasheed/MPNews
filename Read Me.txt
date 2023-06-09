@@ -1,0 +1,19 @@
+Steps to run The project:                                                                                              
+1 : Unzip The Folder "MPNews"                                                         
+2 : Open Visual Studio Code (If you don't have Vs code on your computer     "https://code.visualstudio.com/download" 
+     paste the link on your browser and install it)
+3. On the left bar open click on extention icon install the extension 'Live Server'
+4 : Select File Tab
+5 : Select Open Folder 
+6 : Open NewsWeb folder where you extract
+7 : In Vs Code you will see a file named "index.html"
+8 : Open this file and on the bottom right corner you will see a "Go Live" button click on      it. Otherwise on the html code right click and click on open live server. 
+8 : The home page of MPNews website will open. And make sure the link will be open on      Microsoft edge. And zoom 80%.
+9 : From MPNews Landing page you can navigate to any page. In case of opening login     page You need to enter email and password as given below.
+--------------------------------------------------------------------------------------------------------------------**************************************************************************************************
+--------------------------------------------------------------------------------------------------------------------
+Note : 
+     All button works but it is not fully functional. No database connected. Only      Javascript is used for some functionality. And login page works:
+		      email:          mpnews@gmail.com
+		password:          mpnews
+   

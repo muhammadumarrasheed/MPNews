@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./login.css" />
+    <title>Login to MPNews</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+</head>
+
+<body>
+    <div class="login2">
+        <form class="subs1" id="login" action="onclick">
+            <b class="login3">Login</b>
+            <div class="login-through-your">Login through your MPN account</div>
+            <div class="do-not-have">Do not have an account?</div>
+            <div class="subs-child5"></div>
+            <img class="subs-child6" alt="" src="./public/rectangle-75.svg" />
+            <div class="subs-child7"></div>
+            <div class="subs-child8"></div>
+            <div class="subs-child9"></div>
+            <div class="subs-child10"></div>
+            <div class="subs-child11"></div>
+            <input type="email" class="inputemail-icon" id="email-address1" placeholder="Enter Email" />
+            <input type="password" id="password1" class="subs-child12" placeholder="Enter Password" />
+            <button type="submit" class="button1" id="submitButton">
+                <div class="button-item"></div>
+                <b class="login4">Login</b>
+            </button>
+            <a href="signup.html" class="sign-up2" id="signUpButton">Sign up</a>
+        </form>
+
+        <div class="nav-bar">
+            <div class="logo" onclick="openPage('latest-news1.html')">
+                <span class="mp">MP</span>
+                <span class="news1">News</span>
+            </div>
+            <div class="nav-links">
+                <a href="latest-news1.html" class="active">Latest News             </a>
+                <a href="recommended.html">Recommended News</a>
+                <a href="news-by-categories.html">News By Categories</a>
+                <a href="news-by-terms.html">News By Terms</a>
+                <a href="news-by-source.html">News By Source</a>
+                <a href="live-audio.html">Live Audio</a>
+                <a href="live-t-v.html">Live TV</a>
+                <a href="login.html" class="active" style="color:#3652E1; font-weight:bolder;">Login</a>
+                <span class="indicator"></span>
+
+                <label class="switch" id="switch">
+                    <input type="checkbox" id="voiceCommandsToggle">
+                    <span class="slider"></span>
+                    <span class="text" id = "text">OFF</span>
+                </label>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const emailInput = document.getElementById("email-address1");
+        const passwordInput = document.getElementById("password1");
+        const submitButton = document.getElementById("submitButton");
+
+        // Add event listener for form submission
+        submitButton.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent form submission
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            // Verify email and password
+            if (email === "mpnews@gmail.com" && password === "mpnews") {
+                alert("Login successful!");
+                window.location.href = "index.html";
+            } else if ((email.length !== 0) && (password.length !== 0)) {
+                // Invalid login
+                emailInput.classList.add("shake-input");
+                passwordInput.classList.add("shake-input");
+                alert("Invalid email address or password!");
+                document.getElementsById("emailInput").innerHTML = "";
+                document.getElementsById("passwordInput").innerHTML = "";
+            } else {
+                alert("Creditienals are not entered");
+            }
+        });
+        const voiceCommandsToggle = document.getElementById("voiceCommandsToggle");
+        const myElement = document.getElementById("switch");
+        const text = document.getElementById("text");
+
+        let isClicked = false;
+
+        function speakMessage(message) {
+            const speech = new SpeechSynthesisUtterance(message);
+            speech.lang = "en-US";
+            window.speechSynthesis.speak(speech);
+        }
+
+        voiceCommandsToggle.addEventListener("change", function() {
+            isClicked = this.checked;
+            if (isClicked) {
+                speakMessage("Voice commands activated. You can now give commands through voice.");
+                text.innerHTML = "ON"
+            } else {
+                speakMessage("Voice commands deactivated. Voice commands are currently off.");
+                text.innerHTML = "OFF"
+
+            }
+        });
+        myElement.addEventListener("mouseover", function() {
+            if (isClicked) {
+                speakMessage("Voice commands are currently activated. Tap to deactivate. And give commands through mouse");
+            } else {
+                speakMessage("Voice commands are currently deactivated. Tap to activate and give commands through voice.");
+
+            }
+        });
+    </script>
+</body>
+
+</html>

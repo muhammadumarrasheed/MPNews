@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./recommended.css" />
+    <title>Recommended by MPNews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="logo" onclick="openPage('latest-news1.html')">
+            <span class="mp">MP</span>
+            <span class="news1">News</span>
+        </div>
+        <div class="nav-links">
+            <a href="latest-news1.html">Latest News</a>
+            <a href="recommended.html" class="active" style="color:#3652E1; font-weight:bolder;">Recommended News</a> <span class="indicator"></span>
+            <a href="news-by-categories.html">News By Categories</a>
+            <a href="news-by-terms.html">News By Terms</a>
+            <a href="news-by-source.html">News By Source</a>
+            <a href="live-audio.html">Live Audio</a>
+            <a href="live-t-v.html">Live TV</a>
+            <a href="login.html">Login</a>
+            <label class="switch" id="switch">
+                <input type="checkbox" id="voiceCommandsToggle">
+                <span class="slider"></span>
+                <span class="text" id = "text">OFF</span>
+            </label>
+        </div>
+    </div>
+    <div class="headlines1" style="margin-bottom: 50px;">
+        <b>Recommended News</b></div>
+    <div class="frame-parent31">
+    </div>
+    <div class="circle">
+        <div class="circles-child62"></div>
+        <div class="circles-child63"></div>
+        <div class="circles-child66"></div>
+        <div class="circles-child67"></div>
+        <div class="circles-child61"></div>
+        <div class="circles-child64" style="max-width: 100px; margin:0px;"></div>
+        <div class="circles-child65"></div>
+    </div>
+    <div class="row">
+        <div class="card" id="card1" onclick="openPage('news-detail.html')">
+            <div class="image-container">
+                <img src="./public/image-1@2x.png" alt="Image 1">
+            </div>
+            <div class="content">
+                <ul>
+                    <li> <span class="date">May 2, 2023</span>
+                    </li>
+                    <li> <span class="source">BBC</span>
+                    </li>
+                </ul>
+                <h3 class="title">Imran Khan is arrested</h3>
+                <p class="description">Bank of England says most housing market indicators have continued to soften, as it lifts...</p>
+                <span class="number">1</span>
+            </div>
+        </div>
+
+        <div class="card" id="card2" onclick="openPage('news-detail.html')">
+            <div class="image-container">
+                <img src="https://i.dawn.com/primary/2021/10/616d74a1bdaaf.jpg" alt="Image 1">
+            </div>
+            <div class="content">
+                <ul>
+                    <li> <span class="date">May 2, 2023</span>
+                    </li>
+                    <li> <span class="source"> HUM</span>
+                    </li>
+                </ul>
+                <h3 class="title">No leniency towards May 9 arsonists</h3>
+                <p class="description">The National Assembly on Monday adopted a resolution “vehemently condemning” the May 9...</p>
+                <span class="number">2</span>
+            </div>
+        </div>
+        <div class="card" id="card3" onclick="openPage('news-detail.html')">
+            <div class="image-container">
+                <img src="https://dailyausaf.com/en/wp-content/uploads/2023/05/Chohan-Sheri-Mizari-FactFile-672x372.jpg" alt="Image 1">
+            </div>
+            <div class="content">
+                <ul>
+                    <li> <span class="date">May 1, 2023</span>
+                    </li>
+                    <li> <span class="source">ARY</span>
+                    </li>
+                </ul>
+                <h3 class="title">Mazari, Chohan quit PTI over May 9 </h3>
+                <p class="description">Pakistan Tehreek-e-Insaf (PTI) leaders Shireen Mazari and Fayyazul Hassan Chohan...</p>
+                <span class="number">3</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card" id="card4" onclick="openPage('news-detail.html')">
+            <div class="image-container">
+                <img src="./public/image-1@2x.png" alt="Image 1">
+            </div>
+            <div class="content">
+                <ul>
+                    <li> <span class="date">May 2, 2023</span>
+                    </li>
+                    <li> <span class="source">BBC</span>
+                    </li>
+                </ul>
+                <h3 class="title">Imran Khan is arrested</h3>
+                <p class="description">Bank of England says most housing market indicators have continued to soften, as it lifts...</p>
+                <span class="number">4</span>
+            </div>
+        </div>
+
+        <div class="card" id="card5" onclick="openPage('news-detail.html')">
+            <div class="image-container">
+                <img src="https://i.dawn.com/primary/2021/10/616d74a1bdaaf.jpg" alt="Image 1">
+            </div>
+            <div class="content">
+                <ul>
+                    <li> <span class="date">May 2, 2023</span>
+                    </li>
+                    <li> <span class="source"> HUM</span>
+                    </li>
+                </ul>
+                <h3 class="title">No leniency towards May 9 arsonists</h3>
+                <p class="description">The National Assembly on Monday adopted a resolution “vehemently condemning” the May 9...</p>
+                <span class="number">5</span>
+            </div>
+        </div>
+        <div class="card" id="card6" onclick="openPage('news-detail.html')">
+            <div class="image-container">
+                <img src="https://dailyausaf.com/en/wp-content/uploads/2023/05/Chohan-Sheri-Mizari-FactFile-672x372.jpg" alt="Image 1">
+            </div>
+            <div class="content">
+                <ul>
+                    <li> <span class="date">May 1, 2023</span>
+                    </li>
+                    <li> <span class="source">ARY</span>
+                    </li>
+                </ul>
+                <h3 class="title">Mazari, Chohan quit PTI over May 9 </h3>
+                <p class="description">Pakistan Tehreek-e-Insaf (PTI) leaders Shireen Mazari and Fayyazul Hassan Chohan...</p>
+                <span class="number">6</span>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h1>About Us</h1>
+                <p class="about">Your trusted source for the latest news and updates on Pakistan, delivering reliable and unbiased coverage in real-time.</p>
+            </div>
+            <div>
+                <h1>Subscribe</h1>
+                <div class="subscribe-form">
+                    <input type="email" class="subscribe-input" placeholder="Enter your email">
+                    <button class="subscribe-button">Subscribe</button>
+                </div>
+            </div>
+            <div>
+                <h1>Follow Us</h1>
+                <div class="follow-us">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Group of MPNews. All rights reserved.</p>
+        </div>
+        <div class="footer-bottom">
+            <p>Powered by Group of MPNews</p>
+        </div>
+    </footer>
+
+
+    <script>
+        function openPage(url) {
+            window.location.href = url;
+        }
+        const voiceCommandsToggle = document.getElementById("voiceCommandsToggle");
+        const myElement = document.getElementById("switch");
+        const text = document.getElementById("text");
+
+        let isClicked = false;
+
+        function speakMessage(message) {
+            const speech = new SpeechSynthesisUtterance(message);
+            speech.lang = "en-US";
+            window.speechSynthesis.speak(speech);
+        }
+
+        voiceCommandsToggle.addEventListener("change", function() {
+            isClicked = this.checked;
+            if (isClicked) {
+                speakMessage("Voice commands activated. You can now give commands through voice.");
+                text.innerHTML = "ON"
+            } else {
+                speakMessage("Voice commands deactivated. Voice commands are currently off.");
+                text.innerHTML = "OFF"
+
+            }
+        });
+        myElement.addEventListener("mouseover", function() {
+            if (isClicked) {
+                speakMessage("Voice commands are currently activated. Tap to deactivate. And give commands through mouse");
+            } else {
+                speakMessage("Voice commands are currently deactivated. Tap to activate and give commands through voice.");
+
+            }
+        });
+    </script>
+</body>
+
+</html>

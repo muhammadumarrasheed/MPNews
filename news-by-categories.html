@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./news-by-categories.css" />
+    <title>MPNews Categories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="logo" onclick="openPage('latest-news1.html')">
+            <span class="mp">MP</span>
+            <span class="news1">News</span>
+        </div>
+        <div class="nav-links">
+            <a href="latest-news1.html">Latest News</a>
+            <a href="recommended.html">Recommended News</a>
+            <a href="news-by-categories.html" class="active" style="color:#3652E1; font-weight:bolder;">News By Categories</a> <span class="indicator"></span>
+            <a href="news-by-terms.html">News By Terms</a>
+            <a href="news-by-source.html">News By Source</a>
+            <a href="live-audio.html">Live Audio</a>
+            <a href="live-t-v.html">Live TV</a>
+            <a href="login.html">Login</a>
+            <label class="switch" id="switch">
+                <input type="checkbox" id="voiceCommandsToggle">
+                <span class="slider"></span>
+                <span class="text" id = "text">OFF</span>
+            </label>
+
+        </div>
+    </div>
+    <div class="headlines1" style="margin-bottom: 50px;">
+        <b>News By Categories</b></div>
+    <div class="frame-parent31">
+    </div>
+    <div class="circle">
+        <div class="circles-child62"></div>
+        <div class="circles-child63"></div>
+        <div class="circles-child66"></div>
+        <div class="circles-child67"></div>
+        <div class="circles-child61"></div>
+        <div class="circles-child64" style="max-width: 100px; margin:0px;"></div>
+        <div class="circles-child65"></div>
+    </div>
+    <div class="row">
+        <div class="card" id="card1" onclick="openPage('news-detail.html')">
+            <div class="image-container">
+                <img src="./public/image-24@2x.png" alt="Image 1">
+            </div>
+            <div class="content">
+                <center>
+                    <h3 class="title">Politics</h3><br>
+                </center>
+            </div>
+
+        </div>
+        <div class="card" id="card1" onclick="openPage('news-detail.html')">
+            <div class="image-container">
+                <img src="./public/image-35@2x.png" alt="Image 1">
+            </div>
+            <div class="content">
+                <center>
+                    <h3 class="title">Buiseness</h3><br>
+                </center>
+            </div>
+
+        </div>
+        <div class="card" id="card1" onclick="openPage('news-detail.html')">
+            <div class="image-container">
+                <img src="./public/image-42@2x.png" alt="Image 1">
+            </div>
+            <div class="content">
+                <center>
+                    <h3 class="title"> Sports</h3><br>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card" id="card1" onclick="openPage('news-detail.html')">
+            <div class="image-container">
+                <img src="./public/image-5@2x.png" alt="Image 1">
+            </div>
+            <div class="content">
+                <center>
+                    <h3 class="title">Technology</h3><br>
+                </center>
+            </div>
+        </div>
+        <div class="card" id="card1" onclick="openPage('news-detail.html')">
+            <div class="image-container">
+                <img src="./public/image-25@2x.png" alt="Image 1">
+            </div>
+            <div class="content">
+                <center>
+                    <h3 class="title">Entertainment</h3><br>
+                </center>
+            </div>
+
+        </div>
+        <div class="card" id="card1" onclick="openPage('news-detail.html')">
+            <div class="image-container">
+                <img src="https://s2.research.com/wp-content/uploads/2021/06/24110707/Education-degree-4-1200x600.jpg" alt="Image 1">
+            </div>
+            <div class="content">
+                <center>
+                    <h3 class="title">Education</h3><br>
+                </center>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h1>About Us</h1>
+                <p class="about">Your trusted source for the latest news and updates on Pakistan, delivering reliable and unbiased coverage in real-time.</p>
+            </div>
+            <div>
+                <h1>Subscribe</h1>
+                <div class="subscribe-form">
+                    <input type="email" class="subscribe-input" placeholder="Enter your email">
+                    <button class="subscribe-button">Subscribe</button>
+                </div>
+            </div>
+            <div>
+                <h1>Follow Us</h1>
+                <div class="follow-us">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Group of MPNews. All rights reserved.</p>
+        </div>
+        <div class="footer-bottom">
+            <p>Powered by Group of MPNews</p>
+        </div>
+    </footer>
+
+
+    <script>
+        function openPage(url) {
+            window.location.href = url;
+        }
+        const voiceCommandsToggle = document.getElementById("voiceCommandsToggle");
+        const myElement = document.getElementById("switch");
+        const text = document.getElementById("text");
+
+        let isClicked = false;
+
+        function speakMessage(message) {
+            const speech = new SpeechSynthesisUtterance(message);
+            speech.lang = "en-US";
+            window.speechSynthesis.speak(speech);
+        }
+
+        voiceCommandsToggle.addEventListener("change", function() {
+            isClicked = this.checked;
+            if (isClicked) {
+                speakMessage("Voice commands activated. You can now give commands through voice.");
+                text.innerHTML = "ON"
+            } else {
+                speakMessage("Voice commands deactivated. Voice commands are currently off.");
+                text.innerHTML = "OFF"
+
+            }
+        });
+        myElement.addEventListener("mouseover", function() {
+            if (isClicked) {
+                speakMessage("Voice commands are currently activated. Tap to deactivate. And give commands through mouse");
+            } else {
+                speakMessage("Voice commands are currently deactivated. Tap to activate and give commands through voice.");
+
+            }
+        });
+    </script>
+</body>
+
+</html>
